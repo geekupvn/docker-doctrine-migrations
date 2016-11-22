@@ -14,7 +14,4 @@ RUN mkdir /data
 VOLUME ["/data"]
 WORKDIR /data
 
-# Setup entrypoint with guso 
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
-ENTRYPOINT ["/doctrine-migrations"]
+ENTRYPOINT ["doctrine-migrations"]
